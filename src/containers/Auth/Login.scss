@@ -137,7 +137,7 @@
                     outline: none;
                     border: 1px solid #bdbdbd;
                 }
-                input[type="submit"] {
+                button[type="submit"] {
                     background: #f85f64;
                     border: medium none;
                     border-radius: 4px;
@@ -153,7 +153,7 @@
                     transition: all 0.15s ease-in-out 0s;
                     width: 100%;
                 }
-                input[type="submit"]:hover {
+                button[type="submit"]:hover {
                     background: #fe7175;
                 }
             }

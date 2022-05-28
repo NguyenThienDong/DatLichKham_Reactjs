@@ -8,8 +8,6 @@ import { Link } from "react-router-dom";
 
 // import { FormattedMessage } from "react-intl";
 
-// import adminService from "../services/adminService";
-
 class Login extends Component {
   constructor(props) {
     super(props);
