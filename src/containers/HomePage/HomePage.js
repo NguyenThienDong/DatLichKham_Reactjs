@@ -1,13 +1,17 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
+import Header from "./Header/Header";
+import Banner from "./Banner/Banner";
 
 class Home extends Component {
   render() {
-    const { isLoggedIn } = this.props;
-    let linkToRedirect = isLoggedIn ? "/home" : "/login";
-
-    return <Redirect to={linkToRedirect} />;
+    return (
+      <div>
+        <Header />
+        <Banner />
+      </div>
+    );
   }
 }
 

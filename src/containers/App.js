@@ -14,8 +14,9 @@ import { path } from "../utils";
 
 import Home from "../routes/Home";
 import Login from "./Auth/Login";
-import Header from "./Header/Header";
+import HeaderAdmin from "./HeaderAdmin/Header";
 import System from "../routes/System";
+import HomePage from "../containers/HomePage/HomePage";
 
 import { CustomToastCloseButton } from "../components/CustomToast";
 import ConfirmModal from "../components/ConfirmModal";
@@ -45,7 +46,7 @@ class App extends Component {
         <Router history={history}>
           <div className="main-container">
             <ConfirmModal />
-            {this.props.isLoggedIn && <Header />}
+            {/* {this.props.isLoggedIn && <HeaderAdmin />} */}
 
             <span className="content-container">
               <Switch>
@@ -57,6 +58,10 @@ class App extends Component {
                 <Route
                   path={path.SYSTEM}
                   component={userIsAuthenticated(System)}
+                />
+                <Route
+                  path={path.HOME_PAGE}
+                  component={userIsAuthenticated(HomePage)}
                 />
               </Switch>
             </span>
