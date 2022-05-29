@@ -7,7 +7,7 @@ import { AiFillQuestionCircle, AiOutlineMenu } from "react-icons/ai";
 class Header extends Component {
   render() {
     return (
-      <div className="home-header-container">
+      <div className="home-header-container container">
         <div className="home-header-content">
           <div className="left-content">
             <AiOutlineMenu className="icon-menu" />

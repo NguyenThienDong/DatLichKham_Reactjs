@@ -45,6 +45,7 @@
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
+            padding-bottom: 20px;
             .option {
                 text-align: center;
                 padding: 5px 5px;
@@ -56,7 +57,10 @@
                 font-weight: bold;
                 cursor: pointer;
                 &:hover {
-                    color: #45c3d2
+                    color: #45c3d2;
+                    .option-logo {
+                        opacity: 1
+                    }
                 }
                 .option-logo {
                     background-color: #fff;
@@ -71,7 +75,7 @@
                     .option-icon {
                         font-size: 50px;
                         padding: 10px;
-                        color: #45c3d2
+                        color: #49bce2
                     }
                 }
                 .option-title {

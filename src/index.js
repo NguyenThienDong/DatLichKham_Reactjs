@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "react-toastify/dist/ReactToastify.css";
 import "@coreui/coreui/dist/css/coreui.min.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "./styles/styles.scss";
 
 import App from "./containers/App";

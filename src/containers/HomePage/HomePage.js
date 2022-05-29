@@ -3,13 +3,15 @@ import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import Header from "./Header/Header";
 import Banner from "./Banner/Banner";
+import SectionBasic from "./SectionBasic/SectionBasic";
 
 class Home extends Component {
   render() {
     return (
-      <div>
+      <div style={{ minHeight: "100vh", overflow: "auto" }}>
         <Header />
         <Banner />
+        <SectionBasic />
       </div>
     );
   }

@@ -20,7 +20,7 @@ import HomePage from "../containers/HomePage/HomePage";
 
 import { CustomToastCloseButton } from "../components/CustomToast";
 import ConfirmModal from "../components/ConfirmModal";
-
+import CustomScrollbars from "../components/CustomScrollbars";
 class App extends Component {
   handlePersistorState = () => {
     const { persistor } = this.props;
@@ -44,11 +44,12 @@ class App extends Component {
     return (
       <Fragment>
         <Router history={history}>
-          <div className="main-container">
-            <ConfirmModal />
-            {/* {this.props.isLoggedIn && <HeaderAdmin />} */}
+          {/* <div className="main-container"> */}
+          <ConfirmModal />
+          {/* {this.props.isLoggedIn && <HeaderAdmin />} */}
 
-            <span className="content-container">
+          <div className="content-container">
+            <CustomScrollbars style={{ width: "100%", height: "100vh" }}>
               <Switch>
                 <Route path={path.HOME} exact component={Home} />
                 <Route
@@ -64,21 +65,23 @@ class App extends Component {
                   component={userIsAuthenticated(HomePage)}
                 />
               </Switch>
-            </span>
-
-            <ToastContainer
-              className="toast-container"
-              toastClassName="toast-item"
-              bodyClassName="toast-item-body"
-              autoClose={false}
-              hideProgressBar={true}
-              pauseOnHover={false}
-              pauseOnFocusLoss={true}
-              closeOnClick={false}
-              draggable={false}
-              closeButton={<CustomToastCloseButton />}
-            />
+              <div style={{ height: "400px" }}></div>
+            </CustomScrollbars>
           </div>
+
+          <ToastContainer
+            className="toast-container"
+            toastClassName="toast-item"
+            bodyClassName="toast-item-body"
+            autoClose={false}
+            hideProgressBar={true}
+            pauseOnHover={false}
+            pauseOnFocusLoss={true}
+            closeOnClick={false}
+            draggable={false}
+            closeButton={<CustomToastCloseButton />}
+          />
+          {/* </div> */}
         </Router>
       </Fragment>
     );

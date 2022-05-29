@@ -1,0 +1,23 @@
+.slick-prev, .slick-next {
+    z-index: 1000 !important;
+    border-radius: 50%;
+    background: #fff !important;
+    width: 40px !important;
+    height: 40px !important;
+    box-shadow: #9e9e9e 1px 1px 1px 1px !important;
+    padding: 10px !important;
+}
+.slick-next {
+    right: -8px !important;
+}
+.slick-prev {
+    left: -8px !important;
+}
+.w-98 {
+    width: 98% !important;
+    cursor: pointer;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.5;
+    }
+}
